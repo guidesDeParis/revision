@@ -1,14 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="../schema/gdpSchemaTEI.rng" 
-            type="application/xml" 
-            schematypens="http://relaxng.org/ns/structure/1.0"?>
 <!-- 
    @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ 
     Guides de Paris, Germain Brice, 1684 
    @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ 
    @todo check empty label or empty supplied in label
 -->
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
+<TEI xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../schema/gdpSchemaTEI.xsd"
+ xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
    <teiHeader>
       <fileDesc>
          <titleStmt>
