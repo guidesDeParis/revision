@@ -1,20 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://raw.githubusercontent.com/guidesDeParis/revision/main/schema/gdpSchemaTEI.rng" 
+            type="application/xml" 
+            schematypens="http://relaxng.org/ns/structure/1.0"?>
 <!-- 
    @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ 
     Guides de Paris, Germain Brice, 1684 
    @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ 
    @todo check empty label or empty supplied in label
 -->
-<TEI xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
- xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../schema/gdpSchemaTEI.xsd"
- xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
    <teiHeader>
       <fileDesc>
          <titleStmt>
             <title xml:lang="fre" type="main">Germain Brice, 1684</title>
-            <author ref="#briceGermain">
-               <persName full="yes">Brice, Germain (1653?-1727)</persName>
-            </author>
+            <author ref="#briceGermain"> <persName full="yes">Brice, Germain (1653?-1727)</persName> </author>
             <principal> <persName ref="#MCL">
                <forename>Marianne</forename>
                <surname>Cojannot-Le Blanc</surname>
@@ -80,13 +79,11 @@
             <edition n="1">première édition électronique, <date from="2013" to="2018"
                >2013-2018</date> </edition>
          </editionStmt>
-         <extent>
-            <measure unit="bytes" quantity="1127309">1  127  309 octets</measure>
-            <measure unit="words" quantity="86968">86 968 mots</measure>
-            <measure unit="chars" quantity="505147">505 147 caractères</measure>
-            <measure unit="pages" quantity="855">855 pages</measure>
-            <!-- @todo valider les quantités -->
-         </extent>
+         <extent> <measure unit="bytes" quantity="1127309">1  127  309 octets</measure> <measure
+            unit="words" quantity="86968">86 968 mots</measure> <measure unit="chars"
+            quantity="505147">505 147 caractères</measure> <measure unit="pages" quantity="855"
+            >855 pages</measure>
+            <!-- @todo valider les quantités --> </extent>
          <publicationStmt>
             <authority> <orgName>Histoire des Arts &amp; Représentations</orgName> <orgName
                type="acronym">HAR</orgName> <orgName type="alt">EA 4414</orgName> <address>
@@ -120,12 +117,15 @@
          </publicationStmt>
          <seriesStmt>
             <title xml:lang="fre" type="main">Les Guides de Paris</title>
-            <title xml:lang="fre" type="sub">Les historiens des arts et les corpus numériques</title>
+            <title xml:lang="fre" type="sub"
+               >Les historiens des arts et les corpus numériques</title>
             <idno type="URI">http://www.guidesdeparis.fr</idno>
          </seriesStmt>
          <notesStmt>
-            <note xml:lang="fre" type="abstract">Édition de la <title>Description nouvelle de ce qu’il y a de plus remarquable dans la ville de Paris</title> par Germain Brice, 1684, établie dans le cadre du projet des Guides de Paris sous la direction de Marianne Cojannot-Leblanc (Labex Passés dans le présent).</note>
-            <note xml:lang="eng" type="abstract">Edition of the <title>Description nouvelle de ce qu’il y a de plus remarquable dans la ville de Paris</title> par Germain Brice, 1684, established within the context of the Paris guidebooks project under the direction of Marianne Cojannot-Leblanc (Labex Pasts in present).</note>
+            <note xml:lang="fre" type="abstract"
+               >Édition de la <title>Description nouvelle de ce qu’il y a de plus remarquable dans la ville de Paris</title> par Germain Brice, 1684, établie dans le cadre du projet des Guides de Paris sous la direction de Marianne Cojannot-Leblanc (Labex Passés dans le présent).</note>
+            <note xml:lang="eng" type="abstract"
+               >Edition of the <title>Description nouvelle de ce qu’il y a de plus remarquable dans la ville de Paris</title> par Germain Brice, 1684, established within the context of the Paris guidebooks project under the direction of Marianne Cojannot-Leblanc (Labex Pasts in present).</note>
          </notesStmt>
          <sourceDesc xml:id="gdpBrice1684" default="false">
             <bibl copyOf="#brice1684aManifestation" default="false" status="draft" />
@@ -139,7 +139,11 @@
          <!-- déclaration des principes éditoriaux -->
          <editorialDecl default="false">
             <correction default="false" status="unknown" method="silent">
-               <p>La syntaxe originale du manuscrit a été respectée en suivant les indications de Bernard Barbiche, <ref type="external" target="http://theleme.enc.sorbonne.fr/cours/edition_epoque_moderne/edition_des_textes">Conseils pour l’édition des textes de l’époque moderne (XVI<hi rend="superscript">e</hi>-XVIII<hi rend="superscript">e</hi> siècle)</ref>.</p>
+               <p>La syntaxe originale du manuscrit a été respectée en suivant les indications de Bernard Barbiche, <ref
+                  type="external"
+                  target="http://theleme.enc.sorbonne.fr/cours/edition_epoque_moderne/edition_des_textes"
+                  >Conseils pour l’édition des textes de l’époque moderne (XVI<hi rend="superscript"
+                  >e</hi>-XVIII<hi rend="superscript">e</hi> siècle)</ref>.</p>
             </correction>
             <hyphenation default="false" eol="some">
                <p>Pour les ouvrages imprimés, il n’a pas été tenu compte de l’hyphénation.</p>
@@ -196,66 +200,67 @@
          <change when="2013-11-30" status="draft">Premier échantillonnage</change>
       </revisionDesc>
    </teiHeader>
-   
-         <text xml:id="gdpBrice1684T01" type="volume" n="1">
-            <front xml:id="gdpBrice1684T01Front">
-               <titlePage xml:id="gdpBrice1684T01Front.01" xml:lang="fre">
-                  <docTitle>
-                     <titlePart type="main">
-                        <hi rend="initial">Description <lb />Nouvelle</hi>
-                        <lb /> de ce qu’il y a de plus <lb />remarquable <lb />
-                        <hi rend="initial">dans la ville <lb />de Paris</hi>.</titlePart>
-                  </docTitle>
-                  <byline rend="capital">par <docAuthor>M. B***</docAuthor> </byline>
-                  <docTitle>
-                     <titlePart type="main">Tome Premier.</titlePart>
-                  </docTitle>
-                  <metamark rend="tailpiece" />
-                  <docImprint>
-                     <pubPlace>A Paris</pubPlace>, <publisher>Chez <hi rend="initial">Nicolas Le Gras</hi>, au <lb />troisième Pilier de la Grand’Salle <lb />du Palais, à L, couronnée.</publisher>
-                     <metamark rend="simpleLine" /> <docDate when="1684">M. DC. LXXXIV.</docDate> </docImprint>
-                  <imprimatur>Avec Privilège du Roy.</imprimatur>
-                  <byline>Vivien, Conseiller-Secrétaire du Roi, <lb />Couronne de France &amp; de ses Finances.</byline>
-               </titlePage>
-               <div xml:id="gdpBrice1684T01FrontFr" xml:lang="fre">
-                  <!--Q° EC div>@xml:lang pour la préface dans le front ?-->
-                  <div xml:id="gdpBrice1684T01FrontFr01" type="foreword">
-                     <metamark rend="headpiece" />
-                     <head rend="alignCenter">Avertissement</head>
-                     <p xml:id="gdpBrice1684T01FrontFr01.p001">
-                        <hi rend="initial">P</hi>ersonne ne doute que <placeName
-                        xml:id="gdpBrice1684d1e295"
-                        >Paris</placeName> ne soit à présent une des plus grandes &amp; des plus belles villes du monde. La magnificence de ses bâtimens ; son étendue ; le nombre presque infini des ses habitans, entre lesquels il s’en trouve dont la richesse peut égaler celle de quelques souverains ; et enfin le concours perpétuel de<pb
-                        xml:id="gdpBrice1784P1"
-                         /> toutes les nations de l’Europe, qui viennent avec un extrême empressement étudier les manières françoises &amp; remarquer ce qu’il y a de plus singulier, toutes ces choses font qu’elle doit estre considérée comme une ville qui n’a pas de pareille. Cependant, il arrive fort souvent que peu de personnes en remarquent toutes les véritables beautez, &amp; principalement les étrangers, qui se plaignent que l’on ne les peut connoistre sans en faire une étude particulière &amp; sans se donner la peine de <pb
-                        xml:id="gdpBrice1784P2" /> <fw type="runningHead"
-                        >Avertissement</fw>chercher avec soin ce qui mérite de d’estre veu. Aucune description n’ayant encore paru qui ait pu les instruire, c’est en leur faveur, &amp; pour satisfaire leur curiosité, que l’on a entrepris de décrire en abrégé ce qu’il y a de plus beau &amp; de plus singulier dans cette fameuse ville. Cette description leur sera d’autant plus utile, qu’ils pouront eux-mesme s’en éclaircir sur les lieux qui leur seront marquez, &amp; qu’ils pouront examiner les choses sur lesquelles ils passeroient sans doute, si<pb
-                        xml:id="gdpBrice1784P3"
-                         /> l’on ne leur faisoit observer. Mais pour rendre la chose plus facile, l’on a suivy les quartiers &amp; les ruës autant qu’il a esté possible, afin que dans une mesme course on pût voir plusieurs belles choses.</p>
-                     <p xml:id="gdpBrice1684T01FrontFr01.p002"
-                        >On n’entreprend pas de faire une description exacte. Il est presque impossible d’y réussir, quelque application que l’on y donne, l’on ne veut seulement que rapporter ce qu’il y a de plus remarquable &amp; ce qui mérite d’estre regardé avec quelque sorte de distinction. Le<pb
-                        xml:id="gdpBrice1784P4"
-                         /> dessein n’a pas esté non plus de faire la recherche des antiquitez, parce que <persName
-                        xml:id="gdpBrice1684d1e310">Gilles Corozet</persName>, <persName
-                        xml:id="gdpBrice1684d1e313"
-                        >le père du Breuil</persName> &amp; quelques autres l’ont fait bien mieux que l’on ne pouvoit le faire, &amp; qu’il faut consulter si l’on veut sçavoir les origines ou les fondations. Ces mesmes auteurs raportent les épitaphes &amp; les histoires particulières, qui auroient grossi considérablement ce volume si l’on s’estoit obligé de les copier ; outre qu’il est fort peu nécessaire à un étranger de sça<pb
-                        xml:id="gdpBrice1784P5"
-                         />voir ces sortes de choses, qui ne doivent estre considérées que comme des monuments particuliers qui ne servent de rien à l’histoire publique pour laquelle ils voyagent. Ils aimeront bien mieux sans doute la description d’un cabinet, d’une bibliothèque ou d’un appartement bâti à la moderne, que la lecture des épitaphes du <placeName
-                        xml:id="gdpBrice1684d1e318"
-                        >charnier des Saints-Innocens</placeName>, dont ils ne s’aviseront jamais de faire le déchifrement.</p>
-                     <p xml:id="gdpBrice1684T01FrontFr01.p003">On sera sans doute sur<pb
-                        xml:id="gdpBrice1784P6"
-                         />pris de j’aye osé entreprendre une chose aussi difficile que celle-cy, à la veue de tant de sçavant dont Paris abonde ; mais aprés tout, quoique je n’aye pas réussi, ce me sera néanmoins une gloire assez grande, si je puis inspirer à quelque auteur habile le dessein d’un ouvrage qui réponde en quelque manière à la réputation de cette grande ville.</p>
-                     <p xml:id="gdpBrice1684T01FrontFr01.p004"
-                        >Cependant, comme dans la suite on pourra s’instruire plus particulièrement de certaines choses que l’on n’a pu découvrir, on sera en <pb
-                        xml:id="gdpBrice1784P7"
-                         />mesme temps fort obligé à ceux qui ont des mémoires particuliers, s’ils ont la bonté de les communiquer &amp; d’en avertir le libraire qui a imprimé ce livre, afin que l’on puisse les aller consulter, s’ils veulent bien le permettre.</p>
-                     <metamark rend="tailpiece" />
-                  </div>
-               </div>
-            </front>
-                     </text>
-         
-      
+
+   <text xml:id="gdpBrice1684T01" type="volume" n="1">
+      <front xml:id="gdpBrice1684T01Front">
+         <titlePage xml:id="gdpBrice1684T01Front.01" xml:lang="fre">
+            <docTitle>
+               <titlePart type="main"> <hi rend="initial">Description <lb />Nouvelle</hi>
+                  <lb /> de ce qu’il y a de plus <lb />remarquable <lb /> <hi rend="initial"
+                  >dans la ville <lb />de Paris</hi>.</titlePart>
+            </docTitle>
+            <byline rend="capital">par <docAuthor>M. B***</docAuthor> </byline>
+            <docTitle>
+               <titlePart type="main">Tome Premier.</titlePart>
+            </docTitle>
+            <metamark rend="tailpiece" />
+            <docImprint> <pubPlace>A Paris</pubPlace>, <publisher>Chez <hi rend="initial"
+               >Nicolas Le Gras</hi>, au <lb />troisième Pilier de la Grand’Salle <lb />du Palais, à L, couronnée.</publisher>
+               <metamark rend="simpleLine" /> <docDate when="1684">M. DC. LXXXIV.</docDate> </docImprint>
+            <imprimatur>Avec Privilège du Roy.</imprimatur>
+            <byline>Vivien, Conseiller-Secrétaire du Roi, <lb />Couronne de France &amp; de ses Finances.</byline>
+         </titlePage>
+         <div xml:id="gdpBrice1684T01FrontFr" xml:lang="fre">
+            <!--Q° EC div>@xml:lang pour la préface dans le front ?-->
+            <div xml:id="gdpBrice1684T01FrontFr01" type="foreword">
+               <metamark rend="headpiece" />
+               <head rend="alignCenter">Avertissement</head>
+               <p xml:id="gdpBrice1684T01FrontFr01.p001"> <hi rend="initial"
+                  >P</hi>ersonne ne doute que <placeName xml:id="gdpBrice1684d1e295"
+                  >Paris</placeName> ne soit à présent une des plus grandes &amp; des plus belles villes du monde. La magnificence de ses bâtimens ; son étendue ; le nombre presque infini des ses habitans, entre lesquels il s’en trouve dont la richesse peut égaler celle de quelques souverains ; et enfin le concours perpétuel de<pb
+                  xml:id="gdpBrice1784P1"
+                   /> toutes les nations de l’Europe, qui viennent avec un extrême empressement étudier les manières françoises &amp; remarquer ce qu’il y a de plus singulier, toutes ces choses font qu’elle doit estre considérée comme une ville qui n’a pas de pareille. Cependant, il arrive fort souvent que peu de personnes en remarquent toutes les véritables beautez, &amp; principalement les étrangers, qui se plaignent que l’on ne les peut connoistre sans en faire une étude particulière &amp; sans se donner la peine de <pb
+                  xml:id="gdpBrice1784P2" /> <fw type="runningHead"
+                  >Avertissement</fw>chercher avec soin ce qui mérite de d’estre veu. Aucune description n’ayant encore paru qui ait pu les instruire, c’est en leur faveur, &amp; pour satisfaire leur curiosité, que l’on a entrepris de décrire en abrégé ce qu’il y a de plus beau &amp; de plus singulier dans cette fameuse ville. Cette description leur sera d’autant plus utile, qu’ils pouront eux-mesme s’en éclaircir sur les lieux qui leur seront marquez, &amp; qu’ils pouront examiner les choses sur lesquelles ils passeroient sans doute, si<pb
+                  xml:id="gdpBrice1784P3"
+                   /> l’on ne leur faisoit observer. Mais pour rendre la chose plus facile, l’on a suivy les quartiers &amp; les ruës autant qu’il a esté possible, afin que dans une mesme course on pût voir plusieurs belles choses.</p>
+               <p xml:id="gdpBrice1684T01FrontFr01.p002"
+                  >On n’entreprend pas de faire une description exacte. Il est presque impossible d’y réussir, quelque application que l’on y donne, l’on ne veut seulement que rapporter ce qu’il y a de plus remarquable &amp; ce qui mérite d’estre regardé avec quelque sorte de distinction. Le<pb
+                  xml:id="gdpBrice1784P4"
+                   /> dessein n’a pas esté non plus de faire la recherche des antiquitez, parce que <persName
+                  xml:id="gdpBrice1684d1e310">Gilles Corozet</persName>, <persName
+                  xml:id="gdpBrice1684d1e313"
+                  >le père du Breuil</persName> &amp; quelques autres l’ont fait bien mieux que l’on ne pouvoit le faire, &amp; qu’il faut consulter si l’on veut sçavoir les origines ou les fondations. Ces mesmes auteurs raportent les épitaphes &amp; les histoires particulières, qui auroient grossi considérablement ce volume si l’on s’estoit obligé de les copier ; outre qu’il est fort peu nécessaire à un étranger de sça<pb
+                  xml:id="gdpBrice1784P5"
+                   />voir ces sortes de choses, qui ne doivent estre considérées que comme des monuments particuliers qui ne servent de rien à l’histoire publique pour laquelle ils voyagent. Ils aimeront bien mieux sans doute la description d’un cabinet, d’une bibliothèque ou d’un appartement bâti à la moderne, que la lecture des épitaphes du <placeName
+                  xml:id="gdpBrice1684d1e318"
+                  >charnier des Saints-Innocens</placeName>, dont ils ne s’aviseront jamais de faire le déchifrement.</p>
+               <p xml:id="gdpBrice1684T01FrontFr01.p003">On sera sans doute sur<pb
+                  xml:id="gdpBrice1784P6"
+                   />pris de j’aye osé entreprendre une chose aussi difficile que celle-cy, à la veue de tant de sçavant dont Paris abonde ; mais aprés tout, quoique je n’aye pas réussi, ce me sera néanmoins une gloire assez grande, si je puis inspirer à quelque auteur habile le dessein d’un ouvrage qui réponde en quelque manière à la réputation de cette grande ville.</p>
+               <p xml:id="gdpBrice1684T01FrontFr01.p004"
+                  >Cependant, comme dans la suite on pourra s’instruire plus particulièrement de certaines choses que l’on n’a pu découvrir, on sera en <pb
+                  xml:id="gdpBrice1784P7"
+                   />mesme temps fort obligé à ceux qui ont des mémoires particuliers, s’ils ont la bonté de les communiquer &amp; d’en avertir le libraire qui a imprimé ce livre, afin que l’on puisse les aller consulter, s’ils veulent bien le permettre.</p>
+               <metamark rend="tailpiece" />
+            </div>
+         </div>
+      </front>
+
+      <body>
+         <p />
+      </body>
+   </text>
+
 </TEI>
 <?oxy_options track_changes="on"?>
